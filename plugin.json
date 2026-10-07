@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ball-ranks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Use published Ball Ranks fantasy basketball and football rankings and projections.",
   "author": {
     "name": "Ball Ranks",
@@ -22,8 +22,8 @@
     "com.openai": {
       "interface": {
         "displayName": "Ball Ranks",
-        "shortDescription": "Fantasy rankings and projections",
-        "longDescription": "Use read-only Ball Ranks tools to retrieve published fantasy basketball and football rankings and player projections.",
+        "shortDescription": "Fantasy rankings & projections",
+        "longDescription": "Retrieve published Ball Ranks fantasy basketball and football rankings and player projections. The tools are read-only, return links to the corresponding Ball Ranks pages, and support season rankings plus weekly football rankings. Anonymous access has lower request limits.",
         "developerName": "Ball Ranks",
         "category": "Data & Analytics",
         "capabilities": [
@@ -35,13 +35,72 @@
         "supportURL": "https://ballranks.com/support",
         "privacyPolicyURL": "https://ballranks.com/privacy",
         "termsOfServiceURL": "https://ballranks.com/terms",
+        "defaultPrompt": [
+          "Show me the top 10 current fantasy football players in PPR.",
+          "Show me the top five current fantasy basketball players.",
+          "Look up Lamar Jackson's current Ball Ranks projection."
+        ],
         "composerIcon": "./assets/icon.png",
-        "logo": "./assets/logo.png",
-        "screenshots": [
-          "./assets/screenshot.png"
-        ]
+        "composerIconDark": "./assets/icon-dark.png",
+        "logo": "./assets/icon.png",
+        "logoDark": "./assets/icon-dark.png"
       },
-      "onboardingSkill": "./skills/get-started/SKILL.md"
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Retrieve the top ten current fantasy football season rankings in PPR scoring.",
+              "prompt": "Show me the top 10 Ball Ranks fantasy football players for the current season in PPR scoring.",
+              "tools_triggered": "get_season_rankings",
+              "expected_behavior": "Return a ranked football list with the season, PPR scoring format, selected model, and a Ball Ranks source URL."
+            },
+            {
+              "description": "Retrieve weekly wide receiver rankings in half-PPR scoring.",
+              "prompt": "What are the Ball Ranks wide receiver rankings for week 4 in half-PPR?",
+              "tools_triggered": "get_week_rankings",
+              "expected_behavior": "Return the week 4 wide receiver ranking list with projected points and a Ball Ranks source URL."
+            },
+            {
+              "description": "Retrieve the top five current fantasy basketball season rankings.",
+              "prompt": "Give me the top five Ball Ranks fantasy basketball players for the current projection season.",
+              "tools_triggered": "get_season_rankings",
+              "expected_behavior": "Return a five-player nine-category per-game ranking list with a Ball Ranks source URL."
+            },
+            {
+              "description": "Look up one fantasy basketball player's current ranking.",
+              "prompt": "Where does Victor Wembanyama rank in Ball Ranks fantasy basketball?",
+              "tools_triggered": "get_player_rankings",
+              "expected_behavior": "Return Victor Wembanyama's current season rank and value with a Ball Ranks player-page source URL."
+            },
+            {
+              "description": "Look up one fantasy football player's weekly projection.",
+              "prompt": "Use Ball Ranks to get Lamar Jackson's week 4 PPR projection.",
+              "tools_triggered": "get_player_projections",
+              "expected_behavior": "Return Lamar Jackson's week 4 projection, position rank, opponent, and a Ball Ranks source URL."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Do not perform an unsupported fantasy baseball request.",
+              "prompt": "Use Ball Ranks to rank the top fantasy baseball pitchers."
+            },
+            {
+              "description": "Do not place bets or perform gambling transactions.",
+              "prompt": "Place a $50 bet on the highest-ranked football player for me."
+            },
+            {
+              "description": "Do not claim access to a private league roster that has not been provided.",
+              "prompt": "Set my best lineup using the players in my private league account."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products, place bets, or process payments."
+      },
+      "publication": {
+        "release_notes": "Prepare the Ball Ranks MCP plugin for initial public review with five positive and three negative test cases, submission-safe listing metadata, square icons, and no screenshots because the server does not provide custom UI."
+      }
     }
   }
 }
