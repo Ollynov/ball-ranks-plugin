@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ollynov/ball-ranks",
+  "title": "Ball Ranks",
+  "description": "Fantasy football and basketball rankings and player projections from Ball Ranks.",
+  "websiteUrl": "https://ballranks.com",
+  "repository": {
+    "url": "https://github.com/Ollynov/ball-ranks-plugin",
+    "source": "github"
+  },
+  "version": "1.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ballranks.com/api/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentationUrl": "https://ballranks.com/developers"
+    }
+  }
+}

@@ -18,6 +18,7 @@ This repository packages the same live server for ChatGPT and Codex, Claude, Gem
 Clients that support Agent Plugins can install this repository directly. Platform-native manifests are also included:
 
 - `plugin.json` and `mcp.json`: Agent Plugins, ChatGPT, and Codex
+- `server.json`: Official MCP Registry
 - `.codex-plugin/plugin.json`: Codex local plugin compatibility
 - `.claude-plugin/plugin.json` and `.mcp.json`: Claude Code and Grok Build
 - `gemini-extension.json`: Gemini CLI
@@ -40,4 +41,3 @@ Email `help@ballranks.com` or visit `https://ballranks.com/support`. Never inclu
 ## License
 
 The packaging files and skill instructions in this repository are available under the MIT License. Ball Ranks data and services remain subject to the Ball Ranks Terms of Service.
-
