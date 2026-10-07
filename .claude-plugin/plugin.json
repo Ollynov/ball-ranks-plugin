@@ -1,0 +1,14 @@
+{
+  "name": "ball-ranks",
+  "displayName": "Ball Ranks",
+  "version": "0.1.0",
+  "description": "Use published Ball Ranks fantasy basketball and football rankings and projections.",
+  "author": {
+    "name": "Ball Ranks",
+    "email": "help@ballranks.com",
+    "url": "https://ballranks.com"
+  },
+  "homepage": "https://ballranks.com/developers",
+  "repository": "https://github.com/Ollynov/ball-ranks-plugin",
+  "license": "MIT"
+}

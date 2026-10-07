@@ -1,0 +1,8 @@
+# Changelog
+
+## 0.1.0
+
+- Add portable Agent Plugins and MCP manifests.
+- Add Codex, Claude, Grok Build, and Gemini CLI compatibility files.
+- Add onboarding guidance for the initial four read-only Ball Ranks tools.
+

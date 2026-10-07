@@ -1,0 +1,25 @@
+{
+  "name": "ball-ranks",
+  "version": "0.1.0",
+  "description": "Use published Ball Ranks fantasy basketball and football rankings and projections.",
+  "author": {
+    "name": "Ball Ranks",
+    "email": "help@ballranks.com",
+    "url": "https://ballranks.com"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Ball Ranks",
+    "shortDescription": "Fantasy rankings and projections",
+    "longDescription": "Use read-only Ball Ranks tools to retrieve published fantasy basketball and football rankings and player projections.",
+    "developerName": "Ball Ranks",
+    "category": "Data & Analytics",
+    "capabilities": [
+      "Get fantasy basketball and football season rankings",
+      "Get weekly fantasy football rankings",
+      "Look up player rankings and projections"
+    ],
+    "defaultPrompt": "Use Ball Ranks to answer my fantasy sports question with published rankings or projections."
+  },
+  "mcpServers": "./.mcp.json"
+}

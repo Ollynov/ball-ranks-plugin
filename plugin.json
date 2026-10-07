@@ -1,0 +1,47 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ball-ranks",
+  "version": "0.1.0",
+  "description": "Use published Ball Ranks fantasy basketball and football rankings and projections.",
+  "author": {
+    "name": "Ball Ranks",
+    "email": "help@ballranks.com",
+    "url": "https://ballranks.com"
+  },
+  "homepage": "https://ballranks.com/developers",
+  "repository": "https://github.com/Ollynov/ball-ranks-plugin",
+  "license": "MIT",
+  "keywords": [
+    "fantasy-football",
+    "fantasy-basketball",
+    "rankings",
+    "projections",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Ball Ranks",
+        "shortDescription": "Fantasy rankings and projections",
+        "longDescription": "Use read-only Ball Ranks tools to retrieve published fantasy basketball and football rankings and player projections.",
+        "developerName": "Ball Ranks",
+        "category": "Data & Analytics",
+        "capabilities": [
+          "Get fantasy basketball and football season rankings",
+          "Get weekly fantasy football rankings",
+          "Look up player rankings and projections"
+        ],
+        "websiteURL": "https://ballranks.com",
+        "supportURL": "https://ballranks.com/support",
+        "privacyPolicyURL": "https://ballranks.com/privacy",
+        "termsOfServiceURL": "https://ballranks.com/terms",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png",
+        "screenshots": [
+          "./assets/screenshot.png"
+        ]
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md"
+    }
+  }
+}

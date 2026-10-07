@@ -1,0 +1,11 @@
+{
+  "name": "ball-ranks",
+  "version": "0.1.0",
+  "description": "Use published fantasy basketball and football rankings and projections.",
+  "mcpServers": {
+    "ball-ranks": {
+      "httpUrl": "https://ballranks.com/api/mcp",
+      "description": "Read-only Ball Ranks rankings and player projections"
+    }
+  }
+}
