@@ -36,7 +36,13 @@ All tools are read-only and return structured content plus a canonical `sourceUr
 
 ## Review material
 
-`review/review-cases.json` contains the five positive and three negative cases used for platform review. `review/demo-script.md` is the shared walkthrough plan. Run both against production after any tool-contract change.
+`review/review-cases.json` contains the same five positive and three negative cases imported from `plugin.json`. `review/demo-script.md` is the shared walkthrough plan. `review/openai-submission.md` records the remaining dashboard work and tool-annotation justifications. Run the cases against production after any tool-contract change.
+
+## Build the OpenAI submission ZIP
+
+Run `./scripts/build-openai-submission.sh` from a clean, committed checkout. The script validates the package and creates `dist/ball-ranks-openai-<version>.zip` from the current commit. Rebuilding the same commit produces the same SHA-256 digest.
+
+The ZIP contains only the portable manifest, remote MCP configuration, onboarding skill, and referenced square icons. It intentionally excludes platform compatibility manifests, review notes, repository documentation, and screenshots.
 
 ## Support
 
