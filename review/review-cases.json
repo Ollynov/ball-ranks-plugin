@@ -46,10 +46,11 @@
     },
     {
       "name": "football-weekly-player-projection",
-      "prompt": "Use Ball Ranks to get the week 4 PPR projection for a football player I name.",
+      "prompt": "Use Ball Ranks to get Lamar Jackson's week 4 PPR projection.",
       "expectedTool": "get_player_projections",
       "expectedArguments": {
         "sport": "football",
+        "player": "lamar-jackson",
         "scope": "weekly",
         "week": 4,
         "scoring_format": "ppr"
@@ -82,4 +83,3 @@
     }
   ]
 }
-
