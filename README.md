@@ -34,6 +34,10 @@ No API keys are stored in this repository. Anonymous Model Zero access works wit
 
 All tools are read-only and return structured content plus a canonical `sourceUrl`.
 
+## Review material
+
+`review/review-cases.json` contains the five positive and three negative cases used for platform review. `review/demo-script.md` is the shared walkthrough plan. Run both against production after any tool-contract change.
+
 ## Support
 
 Email `help@ballranks.com` or visit `https://ballranks.com/support`. Never include passwords, sign-in cookies, or full API keys in a support request.
