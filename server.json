@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.ollynov/ball-ranks",
+  "name": "io.github.Ollynov/ball-ranks",
   "title": "Ball Ranks",
   "description": "Fantasy football and basketball rankings and player projections from Ball Ranks.",
   "websiteUrl": "https://ballranks.com",
