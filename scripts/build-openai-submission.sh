@@ -15,7 +15,7 @@ version="$(python3 -c 'import json; print(json.load(open("plugin.json", encoding
 output="dist/ball-ranks-openai-${version}.zip"
 mkdir -p dist
 
-git archive \
+TZ=UTC git archive \
   --format=zip \
   --output="$output" \
   HEAD \
