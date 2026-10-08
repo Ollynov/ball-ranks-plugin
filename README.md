@@ -25,6 +25,18 @@ Clients that support Agent Plugins can install this repository directly. Platfor
 
 No API keys are stored in this repository. Anonymous Model Zero access works with lower request limits. Ball Ranks API keys can be created at `https://ballranks.com/account#developer-access` for account-level limits; clients must store credentials securely.
 
+### Gemini CLI
+
+Install directly from the public repository:
+
+```sh
+gemini extensions install https://github.com/Ollynov/ball-ranks-plugin
+```
+
+Restart Gemini CLI after installation, then run `/extensions list` and `/mcp` to confirm that `ball-ranks` and its live tools are available. `GEMINI.md` gives Gemini concise tool-selection and response guidance.
+
+The public gallery discovers repositories automatically. This repository is public, has the `gemini-cli-extension` GitHub topic, and keeps `gemini-extension.json` at the repository root. No separate gallery submission is required.
+
 ## Current tools
 
 - `get_week_rankings`
