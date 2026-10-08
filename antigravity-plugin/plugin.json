@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "ball-ranks",
+  "description": "Get expert fantasy basketball and football rankings and projections from Ball Ranks."
+}
