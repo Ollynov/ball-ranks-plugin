@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Add light and dark Ball Ranks icons to the Official MCP Registry manifest.
+
 ## 0.2.0
 
 - Add OpenAI review cases and release notes to the portable and Codex manifests.
