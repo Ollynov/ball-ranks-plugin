@@ -6,6 +6,10 @@
 - Bring listing text, URLs, prompts, and square icon references in line with public submission limits.
 - Remove the screenshot declaration because the MCP server does not provide custom UI.
 - Add deterministic validation and ZIP build commands for the OpenAI submission package.
+- Add a native Google Antigravity plugin with the strict manifest, remote MCP configuration, and focused Ball Ranks skill.
+- Add Gemini-specific context with tool-selection guidance and example requests.
+- Add direct-install and verification instructions for Gemini CLI.
+- Expand the Gemini gallery description.
 
 ## 0.1.0
 
