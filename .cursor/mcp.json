@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "ball-ranks": {
+      "url": "https://ballranks.com/api/mcp"
+    }
+  }
+}
