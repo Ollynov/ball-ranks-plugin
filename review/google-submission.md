@@ -31,10 +31,10 @@ Publication awaits owner approval. Do not attach multiple unrelated generic ZIPs
 ## Verified client checks
 
 - Official Gemini CLI `0.63.0`, run via `npx @google/gemini-cli`.
-- Installed the candidate into an isolated `GEMINI_CLI_HOME`. `extensions list` reports Ball Ranks `0.2.0` enabled, `GEMINI.md`, one MCP server, and its onboarding skill. `mcp list` reports the production HTTP server **Connected**. These management commands required no Google account sign-in.
+- Installed the local candidate and the public GitHub repository pinned to the verified commit into separate isolated `GEMINI_CLI_HOME` directories. `extensions list` reports Ball Ranks `0.2.0` enabled, `GEMINI.md`, one MCP server, and its onboarding skill. `mcp list` reports the production HTTP server **Connected**. These management commands required no Google account sign-in.
 - Official Antigravity CLI `1.3.3`, downloaded from the vendor URL in its official installer manifest and verified against the manifest's SHA-512 checksum.
 - `agy plugin validate ./antigravity-plugin` passed: one skill and one MCP server processed.
-- `agy plugin install ./antigravity-plugin` passed. `plugin list` records the imported Ball Ranks skill and MCP server. Plain `mcp list` lists only separately configured servers and returned none; it is not proof of plugin runtime connection.
+- `agy plugin install ./antigravity-plugin` passed and installed under `~/.gemini/config/plugins/ball-ranks/`. `plugin list` records the imported Ball Ranks skill and MCP server. Plain `mcp list` returned none; it is not proof of plugin runtime connection.
 - Existing OpenAI package validator and ZIP builder passed. No model-assisted Google data retrieval or recording has been completed.
 
 Full assistant execution requires an eligible Gemini CLI authentication route or an Antigravity Google account/API key. [Antigravity authentication](https://antigravity.google/docs/cli/install) supports an existing keyring session, Google sign-in, or a Gemini API key. MFA depends on the owner's Google account security settings; the plugin does not require MFA. Installing or validating these packages does not itself require login.
