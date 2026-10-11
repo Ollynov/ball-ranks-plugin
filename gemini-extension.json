@@ -1,7 +1,8 @@
 {
   "name": "ball-ranks",
-  "version": "0.1.0",
-  "description": "Use published fantasy basketball and football rankings and projections.",
+  "version": "0.2.0",
+  "description": "Get expert fantasy basketball and football rankings and projections from Ball Ranks.",
+  "contextFileName": "GEMINI.md",
   "mcpServers": {
     "ball-ranks": {
       "httpUrl": "https://ballranks.com/api/mcp",
