@@ -1,6 +1,6 @@
 {
   "name": "ball-ranks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Use published Ball Ranks fantasy basketball and football rankings and projections.",
   "author": {
     "name": "Ball Ranks",
@@ -10,8 +10,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Ball Ranks",
-    "shortDescription": "Fantasy rankings and projections",
-    "longDescription": "Use read-only Ball Ranks tools to retrieve published fantasy basketball and football rankings and player projections.",
+    "shortDescription": "Fantasy rankings & projections",
+    "longDescription": "Retrieve published Ball Ranks fantasy basketball and football rankings and player projections. The tools are read-only, return links to the corresponding Ball Ranks pages, and support season rankings plus weekly football rankings. Anonymous access has lower request limits.",
     "developerName": "Ball Ranks",
     "category": "Data & Analytics",
     "capabilities": [
@@ -19,7 +19,17 @@
       "Get weekly fantasy football rankings",
       "Look up player rankings and projections"
     ],
-    "defaultPrompt": "Use Ball Ranks to answer my fantasy sports question with published rankings or projections."
+    "websiteURL": "https://ballranks.com",
+    "privacyPolicyURL": "https://ballranks.com/privacy",
+    "termsOfServiceURL": "https://ballranks.com/terms",
+    "defaultPrompt": [
+      "Show me the top 10 current fantasy football players in PPR.",
+      "Show me the top five current fantasy basketball players.",
+      "Look up Lamar Jackson's current Ball Ranks projection."
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "logoDark": "./assets/icon-dark.png"
   },
   "mcpServers": "./.mcp.json"
 }

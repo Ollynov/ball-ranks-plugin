@@ -1,85 +1,48 @@
 {
-  "version": "0.1.0",
   "positive": [
     {
-      "name": "football-season-board",
+      "description": "Retrieve the top ten current fantasy football season rankings in PPR scoring.",
       "prompt": "Show me the top 10 Ball Ranks fantasy football players for the current season in PPR scoring.",
-      "expectedTool": "get_season_rankings",
-      "expectedArguments": {
-        "sport": "football",
-        "scoring_format": "ppr",
-        "limit": 10
-      },
-      "expectedOutcome": "A ranked football list with the season, scoring format, model, and source URL."
+      "tools_triggered": "get_season_rankings",
+      "expected_behavior": "Return a ranked football list with the season, PPR scoring format, selected model, and a Ball Ranks source URL."
     },
     {
-      "name": "football-weekly-position-board",
+      "description": "Retrieve weekly wide receiver rankings in half-PPR scoring.",
       "prompt": "What are the Ball Ranks wide receiver rankings for week 4 in half-PPR?",
-      "expectedTool": "get_week_rankings",
-      "expectedArguments": {
-        "sport": "football",
-        "week": 4,
-        "position": "WR",
-        "scoring_format": "half_ppr"
-      },
-      "expectedOutcome": "A weekly WR ranking list with projected points and a source URL."
+      "tools_triggered": "get_week_rankings",
+      "expected_behavior": "Return the week 4 wide receiver ranking list with projected points and a Ball Ranks source URL."
     },
     {
-      "name": "basketball-season-board",
+      "description": "Retrieve the top five current fantasy basketball season rankings.",
       "prompt": "Give me the top five Ball Ranks fantasy basketball players for the current projection season.",
-      "expectedTool": "get_season_rankings",
-      "expectedArguments": {
-        "sport": "basketball",
-        "limit": 5
-      },
-      "expectedOutcome": "A five-player nine-category per-game ranking list with a source URL."
+      "tools_triggered": "get_season_rankings",
+      "expected_behavior": "Return a five-player nine-category per-game ranking list with a Ball Ranks source URL."
     },
     {
-      "name": "basketball-player-ranking",
+      "description": "Look up one fantasy basketball player's current ranking.",
       "prompt": "Where does Victor Wembanyama rank in Ball Ranks fantasy basketball?",
-      "expectedTool": "get_player_rankings",
-      "expectedArguments": {
-        "sport": "basketball",
-        "player": "victor-wembanyama"
-      },
-      "expectedOutcome": "The player's current season rank and value with a player-page source URL."
+      "tools_triggered": "get_player_rankings",
+      "expected_behavior": "Return Victor Wembanyama's current season rank and value with a Ball Ranks player-page source URL."
     },
     {
-      "name": "football-weekly-player-projection",
+      "description": "Look up one fantasy football player's weekly projection.",
       "prompt": "Use Ball Ranks to get Lamar Jackson's week 4 PPR projection.",
-      "expectedTool": "get_player_projections",
-      "expectedArguments": {
-        "sport": "football",
-        "player": "lamar-jackson",
-        "scope": "weekly",
-        "week": 4,
-        "scoring_format": "ppr"
-      },
-      "expectedOutcome": "The named player's week 4 projection, position rank, opponent, and source URL."
+      "tools_triggered": "get_player_projections",
+      "expected_behavior": "Return Lamar Jackson's week 4 projection, position rank, opponent, and a Ball Ranks source URL."
     }
   ],
   "negative": [
     {
-      "name": "unsupported-basketball-weekly-ranking",
-      "prompt": "Show me Ball Ranks fantasy basketball rankings for week 4.",
-      "expectedTool": "get_week_rankings",
-      "expectedOutcome": "The server returns unsupported_combination because weekly ranking boards are football-only."
+      "description": "Do not perform an unsupported fantasy baseball request.",
+      "prompt": "Use Ball Ranks to rank the top fantasy baseball pitchers."
     },
     {
-      "name": "missing-week-for-weekly-projection",
-      "prompt": "Give me a weekly Ball Ranks football projection for a player, but do not choose a week.",
-      "expectedTool": "get_player_projections",
-      "expectedOutcome": "Input validation requires a week before the tool runs."
+      "description": "Do not place bets or perform gambling transactions.",
+      "prompt": "Place a $50 bet on the highest-ranked football player for me."
     },
     {
-      "name": "premium-model-without-access",
-      "prompt": "Use Ball Ranks Model One rankings without connecting a Premium account or providing a key.",
-      "expectedTool": "get_season_rankings",
-      "expectedArguments": {
-        "sport": "football",
-        "model": "v1"
-      },
-      "expectedOutcome": "The server returns premium_required and does not return Model One data."
+      "description": "Do not claim access to a private league roster that has not been provided.",
+      "prompt": "Set my best lineup using the players in my private league account."
     }
   ]
 }
