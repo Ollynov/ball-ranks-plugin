@@ -1,6 +1,6 @@
 # Google release and submission preparation
 
-Verified 2026-10-11 against public main `f202c449c938764d5adf16451667e4b9079468ea`.
+Verified 2026-10-11 against public main `03f9a892aed6aeac00bc996409516baa739af646`.
 
 ## Release candidate
 
@@ -10,9 +10,9 @@ Candidate archives built from the verified commit:
 
 | Archive | SHA-256 |
 | --- | --- |
-| `dist/ball-ranks-gemini-0.2.0.zip` | `f8370c76cafc4708516067f8cc21d663e88e99fb9fd35106f96c5262902adddc` |
-| `dist/ball-ranks-antigravity-0.2.0.zip` | `47acb731e97cb7d2b5ec3863eae3ea0facf3ac53203679b25e491477d5209599` |
-| `dist/ball-ranks-openai-0.2.0.zip` | `37af6a8e43be390b0b71384a03552c7074f684444040cafe3365f5a513092c8b` |
+| `dist/ball-ranks-gemini-0.2.0.zip` | `aa88722c0d1b7ed5073983ecfd32f07f897a588c31272e566776aca547d1e5ab` |
+| `dist/ball-ranks-antigravity-0.2.0.zip` | `d187cd2eae57f2e88f6166046eac613826d527c59d431f42357e6fd09b15e520` |
+| `dist/ball-ranks-openai-0.2.0.zip` | `a111fb32449787f841f7e82dd5e363c50277d75fb9d45ff5adb49e94c3497d3d` |
 
 The Gemini archive contains its manifest at archive root, `GEMINI.md`, README, and license. The Antigravity archive contains the contents of `antigravity-plugin/` at archive root. The OpenAI archive has its own narrower contents and cannot substitute for a Gemini archive.
 
@@ -20,8 +20,8 @@ Build the Google candidates from the same source commit:
 
 ```sh
 mkdir -p dist
-git archive --format=zip --output=dist/ball-ranks-gemini-0.2.0.zip f202c449c938764d5adf16451667e4b9079468ea gemini-extension.json GEMINI.md LICENSE README.md
-git archive --format=zip --output=dist/ball-ranks-antigravity-0.2.0.zip f202c449c938764d5adf16451667e4b9079468ea:antigravity-plugin
+git archive --format=zip --output=dist/ball-ranks-gemini-0.2.0.zip 03f9a892aed6aeac00bc996409516baa739af646 gemini-extension.json GEMINI.md LICENSE README.md
+git archive --format=zip --output=dist/ball-ranks-antigravity-0.2.0.zip 03f9a892aed6aeac00bc996409516baa739af646:antigravity-plugin
 ```
 
 Release notes draft: “Add the native Google Antigravity package, Gemini tool-selection context and installation guidance, and the validated OpenAI submission package. All clients connect to the existing read-only Ball Ranks MCP service.”
@@ -51,11 +51,11 @@ Optional upstream website issue draft, not posted:
 >
 > The public repository https://github.com/Ollynov/ball-ranks-plugin has the `gemini-cli-extension` topic and a root `gemini-extension.json`. On 2026-10-11, Gallery searches for `ball-ranks` and `Ollynov` returned no cards. Gemini CLI 0.63.0 installs the current 0.2.0 package successfully and connects to its remote MCP server. Could you check crawler discovery or validation for this repository? I cannot verify when the topic was originally added, so I cannot establish its exact eligible crawl age.
 
-## Antigravity interest-form draft
+## Antigravity interest-form submission
 
-Inspected the [official form](https://forms.gle/2EX5RFYPoJe1UgxR9) in the Codex browser. The Google account was already signed in. A draft was prepared through the final Submit page; it was not submitted. No logo, video, repository-upload, authentication, or legal-attestation field was present in this version of the form.
+The owner submitted the [official form](https://forms.gle/2EX5RFYPoJe1UgxR9) on 2026-10-11 after reviewing the prepared answers in the Codex browser. No logo, video, repository-upload, authentication, or legal-attestation field was present in this version of the form.
 
-| Actual field | Draft answer |
+| Actual field | Submitted answer |
 | --- | --- |
 | Email | `help@ballranks.com` |
 | Company Name | Ball Ranks |
@@ -65,8 +65,8 @@ Inspected the [official form](https://forms.gle/2EX5RFYPoJe1UgxR9) in the Codex 
 | Public-facing support | `help@ballranks.com; https://ballranks.com/support` |
 | Documentation URL | `https://github.com/Ollynov/ball-ranks-plugin#google-antigravity` |
 
-Plugin Description draft:
+Plugin Description:
 
 > Ball Ranks provides fantasy football and basketball season rankings, weekly football rankings, and player projections through four read-only MCP tools. The Antigravity package includes a native plugin manifest, a remote MCP configuration for https://ballranks.com/api/mcp, and a focused skill that selects the relevant tool and cites the returned Ball Ranks source URL. Public Model Zero data is available with anonymous request limits. Repository: https://github.com/Ollynov/ball-ranks-plugin/tree/main/antigravity-plugin
 
-The owner should confirm the company/contact details and approve submitting this specific draft. The existing icon assets remain available if Google requests them later. Successful end-to-end tool evidence remains useful review material, even though this interest form does not ask for a demo.
+Google review or follow-up is pending. The existing icon assets remain available if Google requests them later. Successful end-to-end tool evidence remains useful review material, even though this interest form did not ask for a demo.
