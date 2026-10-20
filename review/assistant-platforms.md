@@ -4,7 +4,7 @@ Verified 2026-10-11 against public package commit `f202c44` and the production M
 
 ## Shared listing and reviewer answers
 
-- Name: Ball Ranks.
+- Name: Ball Ranks Fantasy Sports (publisher and website brand stay Ball Ranks).
 - Publisher/support: Ball Ranks, `help@ballranks.com`.
 - Description: Published fantasy basketball and football rankings and player projections.
 - Repository: https://github.com/Ollynov/ball-ranks-plugin

@@ -21,7 +21,7 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Ball Ranks",
+        "displayName": "Ball Ranks Fantasy Sports",
         "shortDescription": "Fantasy rankings & projections",
         "longDescription": "Retrieve published Ball Ranks fantasy basketball and football rankings and player projections. The tools are read-only, return links to the corresponding Ball Ranks pages, and support season rankings plus weekly football rankings. Anonymous access has lower request limits.",
         "developerName": "Ball Ranks",
