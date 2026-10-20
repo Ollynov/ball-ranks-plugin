@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- Rename the listing display name to "Ball Ranks Fantasy Sports" in the Official MCP Registry manifest (`title`, registry version 1.1.2) and the portable, Codex, and Claude plugin manifests (`displayName`). Package names, the registry server name `io.github.Ollynov/ball-ranks`, slugs, URLs, and the developer name are unchanged.
+
 ## 0.2.1
 
 - Add light and dark Ball Ranks icons to the Official MCP Registry manifest.
