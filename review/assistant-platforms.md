@@ -28,7 +28,7 @@ All four tools retrieve published data. None edits rosters, connects a private l
 
 Authentication: public Model Zero (`v0`) accepts no credentials. Optional Ball Ranks keys use `Authorization: Bearer <key>` where a host accepts headers. Model One (`v1`) requires Premium. These keys are not OAuth tokens; this package declares no OAuth flow or scopes. Keep real keys outside manifests, screenshots and recordings.
 
-Limits documented by the product: anonymous 10/day per observed IP; Free account 8/minute and 80/day; Premium account 60/minute and 1,000/day. Product requests also pass a 60/minute IP guard; MCP discovery has a separate 300/minute guard. Shared platform egress can combine anonymous users' usage. After HTTP 429, respect `Retry-After` and report the error without inventing rankings. An invalid/revoked key is unauthorized; unsupported sport/week/scoring combinations require clarification or a supported request.
+Limits documented by the product: anonymous 50/day per observed IP; Free account 8/minute and 80/day; Premium account 60/minute and 1,000/day. Product requests also pass a 60/minute IP guard; MCP discovery has a separate 300/minute guard. Shared platform egress can combine anonymous users' usage. After HTTP 429, respect `Retry-After` and report the error without inventing rankings. An invalid/revoked key is unauthorized; unsupported sport/week/scoring combinations require clarification or a supported request.
 
 Reviewer procedure:
 
